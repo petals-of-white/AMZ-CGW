@@ -1,0 +1,29 @@
+﻿<Window
+    x:Class="Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindows"
+    Width="800"
+    Height="800"
+    mc:Ignorable="d">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Button
+                x:Name="openDICOMbtn"
+                Click="openDICOMbtn_Click"
+                Content="Вибрати файли..." />
+            <!--<Button x:Name=""/>-->
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <local:DicomPlaneViewer x:Name="axialViewer" />
+            <local:DicomPlaneViewer x:Name="coronalViewer" />
+            <local:DicomPlaneViewer x:Name="sagittalViewer" />
+
+        </StackPanel>
+
+
+    </StackPanel>
+</Window>
